@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 0f5da86327fb21b4fbfc5cefc9836cdf
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - caraVisible: {instanceID: 0}
+  - dorso: {fileID: 21300000, guid: 496263a23a85a214e94cca433d1a547f, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
