@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public int filas = 4;
     public int columnas = 4;
     public float espacioEntreCartas = 1.0f; // Variable editable para el espacio entre cartas
+    public Tablero tablero;
 
     void Start()
     {
@@ -64,7 +65,7 @@ public class GameManager : MonoBehaviour
 
         cartasDestruidas += 2;
 
-        if (cartasDestruidas >= (filas * columnas))
+        if (cartasDestruidas >= (filas * columnas)/2)
         {
             Debug.Log("Se destruyeron todas las cartas. Generando nuevo tablero...");
             GenerarTablero();
@@ -104,5 +105,6 @@ public class GameManager : MonoBehaviour
         generandoNuevasCartas = false;
 
         // Implementa la lógica para generar el tablero inicial aquí
+        tablero.GenerarTablero();
     }
 }

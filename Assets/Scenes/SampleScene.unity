@@ -328,6 +328,7 @@ MonoBehaviour:
   filas: 4
   columnas: 4
   espacioEntreCartas: 1
+  tablero: {fileID: 1082441709}
 --- !u!4 &845004066
 Transform:
   m_ObjectHideFlags: 0

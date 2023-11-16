@@ -9,12 +9,7 @@ public class Tablero : MonoBehaviour
 
     public float espacioEntreCartas = 1.0f; // Variable editable para el espacio entre cartas
 
-    void Start()
-    {
-        GenerarTablero();
-    }
-
-    void GenerarTablero()
+    public void GenerarTablero()
         {
             // Creamos una lista de cartas duplicadas
         List<Carta> cartasDuplicadas = new List<Carta>();
