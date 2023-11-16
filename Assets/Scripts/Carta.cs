@@ -7,6 +7,8 @@ public class Carta : MonoBehaviour
 
     private bool estaVisible = false; // Indica si la cara de la carta está visible
 
+    public bool EstaVisible { get { return estaVisible; } } // Propiedad para acceder al estado de visibilidad
+
     void Start()
     {
         MostrarDorso(); // Al inicio, mostramos el dorso de la carta
@@ -18,23 +20,27 @@ public class Carta : MonoBehaviour
         GetComponent<BoxCollider2D>().size = spriteSize;
     }
 
-    void OnMouseDown()
-    {
-        if (!estaVisible)
-        {
-            MostrarCara(); // Si la carta no está visible, la mostramos al hacer clic
-        }
-    }
-
-    void MostrarCara()
+    public void MostrarCara()
     {
         GetComponent<SpriteRenderer>().sprite = caraVisible;
         estaVisible = true;
     }
 
-    void MostrarDorso()
+    public void MostrarDorso()
     {
         GetComponent<SpriteRenderer>().sprite = dorso;
         estaVisible = false;
+    }
+
+    public void DarVuelta()
+    {
+        if (estaVisible)
+        {
+            MostrarDorso();
+        }
+        else
+        {
+            MostrarCara();
+        }
     }
 }
